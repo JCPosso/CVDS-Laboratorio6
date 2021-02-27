@@ -3,7 +3,7 @@
 ### Parte II - HACIENDO UNA APLICACION WEB DINAMICA DE BAJO NIVEL
 
 ### Creamos el proyecto maven
-![Creation image](img/creation.png)
+![Creation image](img/creation.PNG)
 
 #### El puerto TCP/IP para el servidor Tomcat esta configurado en el puerto :8080
 
@@ -52,5 +52,5 @@ Una vez creemos nuestro nuevo servicio de tipo GET realizamos las pruebas corres
 
 - Ell valor ingresado no existe
 
-![](img.errorFound.PNG)
+![](img/errorFound.PNG)
 
