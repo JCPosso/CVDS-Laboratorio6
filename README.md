@@ -39,14 +39,18 @@ url el valor "/helloServlet?name= Johann y Juan" y obtenremos el sigueinte resul
 Una vez creemos nuestro nuevo servicio de tipo GET realizamos las pruebas correspondientes
 
 - El servidor responde de manera correcta y devuelve contenido
+
 ![](img/serviceOK.PNG)
 
 - No se indican parametros
+
 ![](img/noParams.PNG)
 
 - El parametro no es un entero
+
 ![](img/formatError.PNG)
 
 - Ell valor ingresado no existe
+
 ![](img.errorFound.PNG)
 
