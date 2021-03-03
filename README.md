@@ -74,6 +74,16 @@ Mientras que el POST  no recibe parametros ni tampoco devuelve nada al formulari
 #### ¿Que esta viendo en la clase Service?
 Cuando utilizamos el metodo GET , la clase service.java nos permite hacer un llamado a una URL en la cual nos retorna una Lista de las cosas por hacer en formato json y el mismo metodo se encarga de convertir los datos  a un Objeto; en este caso se llamado TodoServices, y esta misma clase se encarga de renderizar los elementos en un ambiente HTML utilizando tablas.
 
-## PARTE IV
+### PARTE IV -Pruebas
+### A
+Primero intentamos adivinar el numero y proporciona los siguientes resultados:
+#### Perder Intento
+![](/img/perderintento.PNG)
+#### Ganar Juego
+![](/img/Win.PNG)
+#### Perder Juego
+![](/img/lose.PNG)
 
-
+### B
+Al realizar los intentos y verificar el cambio de puntajes en ambos computadores. Nos dimos cuenta que son valores independientes.
+![](/img/label.PNG)

@@ -1,90 +1,82 @@
 package adivinador;
 import java.io.Serializable;
-import  java.util.Random;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import java.util.ArrayList;
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name = "guessBean")
 @SessionScoped
-public class GameBean {
-    int number;
-    int attemps;
-    int award;
-    String status;
-    boolean hasWin;
+public class GameBean implements Serializable{
     
+    private int num;
+    private int intentos;
+    private int acum;
+    private int inte;
+    private String estado;
+    private ArrayList<Integer> listIntentos;
+
     public GameBean() {
+        listIntentos=new ArrayList<Integer>();
         restart();
     }
-
-    public void guess(int intento){
-        if (award>0){
-            attemps+=1;
-            if (number == intento){
-                hasWin = true;
-                status = "Has ganado !";
-                if ( attemps == 1){
-                    award = 100000;
-                }
-            }
-            if (!hasWin){
-            award -= (10000);
-            }
+    public void guess(int inte){
+        this.inte= inte;
+        if(inte == this.num){
+            estado="Gano "+acum;
         }else{
-            status ="Game Over!!";
+            acum-=10000;
+            intentos+=1;
+            listIntentos.add(inte);
         }
+        
     }
-
     public void restart(){
-        number = new Random().nextInt(10);
-        attemps = 0;
-        award = 100000;
-        status = "Jugando...";
-        hasWin= false;
-    }
-
-
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getAttemps() {
-        return attemps;
-    }
-
-    public void setAttemps(int attemps) {
-        this.attemps = attemps;
-    }
-
-    public int getAward() {
-        return award;
-    }
-
-    public void setAward(int award) {
-        this.award = award;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public boolean isHasWin() {
-        return hasWin;
-    }
-
-    public void setHasWin(boolean hasWin) {
-        this.hasWin = hasWin;
+        num = (int)(Math.random()*10+1);
+        intentos=0;
+        acum=100000;
+        listIntentos.clear();
+        estado="Jugando..";
     }
     
+    
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public int getIntentos() {
+        return intentos;
+    }
+
+    public void setIntentos(int intentos) {
+        this.intentos = intentos;
+    }
+
+    public int getAcum() {
+        return acum;
+    }
+
+    public void setAcum(int acum) {
+        this.acum = acum;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public ArrayList<Integer> getListIntentos() {
+        return listIntentos;
+    }
+
+    public void setListIntentos(ArrayList<Integer> listIntentos) {
+        this.listIntentos = listIntentos;
+    } 
 }
