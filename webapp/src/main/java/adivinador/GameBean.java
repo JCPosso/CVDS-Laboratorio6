@@ -1,4 +1,5 @@
 package adivinador;
+import java.io.Serializable;
 import  java.util.Random;
 
 import javax.faces.bean.ManagedBean;
@@ -6,7 +7,7 @@ import javax.faces.bean.ApplicationScoped;
 
 @ManagedBean(name = "guessBean")
 @ApplicationScoped
-public class GameBean {
+public class GameBean  implements Serializable{
     int number;
     int attemps;
     int award;
@@ -18,24 +19,28 @@ public class GameBean {
     }
 
     public void guess(int intento){
-        attemps+=1;
-        if (number == intento){
-            hasWin = true;
-            status = "Has ganado !";
-            if ( intento == 1){
-                award = 100000;
+        if (award>0){
+            attemps+=1;
+            if (number == intento){
+                hasWin = true;
+                status = "Has ganado !";
+                if ( attemps == 1){
+                    award = 100000;
+                }
             }
-        }
-        if (!hasWin){
-           award -= (10000* attemps);
+            if (!hasWin){
+            award -= (10000);
+            }
+        }else{
+            status ="Game Over!!";
         }
     }
 
     public void restart(){
-        number = new Random().nextInt(999);
+        number = new Random().nextInt(10);
         attemps = 0;
         award = 100000;
-        status = "game Over";
+        status = "Jugando...";
         hasWin= false;
     }
 
