@@ -54,3 +54,26 @@ Una vez creemos nuestro nuevo servicio de tipo GET realizamos las pruebas corres
 
 ![](img/errorFound.PNG)
 
+### PARTE III
+ Primero , creamos el archivo Html y luego  desplegamos el servidor para ver como se ve:
+
+ ![](img/formulario.PNG)
+ 
+ - Probamos  el Post
+
+ ![](img/post.PNG)
+ 
+- Probamos que el GET funcione correctamente
+
+![](img/get.PNG)
+
+#### ¿Que diferencia hay entre el metodo GET y POST?
+Si utilizamos el metodo GET el input debe llamarse igual  que el parametro que estamos recibiendo
+Mientras que el POST  no recibe parametros ni tampoco devuelve nada al formulario.  
+
+#### ¿Que esta viendo en la clase Service?
+Cuando utilizamos el metodo GET , la clase service.java nos permite hacer un llamado a una URL en la cual nos retorna una Lista de las cosas por hacer en formato json y el mismo metodo se encarga de convertir los datos  a un Objeto; en este caso se llamado TodoServices, y esta misma clase se encarga de renderizar los elementos en un ambiente HTML utilizando tablas.
+
+## PARTE IV
+
+
