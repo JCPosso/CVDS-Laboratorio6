@@ -3,11 +3,12 @@ import java.io.Serializable;
 import  java.util.Random;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ApplicationScoped;
 
 @ManagedBean(name = "guessBean")
-@ApplicationScoped
-public class GameBean  implements Serializable{
+@SessionScoped
+public class GameBean {
     int number;
     int attemps;
     int award;
