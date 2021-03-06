@@ -7,3 +7,9 @@ workflows:
   maven_test:
     jobs:
       - maven/test
+
+deployment:
+  staging:
+    branch: master
+    heroku: 
+      appname: primafacejsf
