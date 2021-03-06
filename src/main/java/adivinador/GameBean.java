@@ -12,7 +12,6 @@ public class GameBean implements Serializable{
     private int num;
     private int intentos;
     private int acum;
-    private int inte;
     private String estado;
     private ArrayList<Integer> listIntentos;
 
@@ -21,7 +20,6 @@ public class GameBean implements Serializable{
         restart();
     }
     public void guess(int inte){
-        this.inte= inte;
         if(inte == this.num){
             estado="Gano "+acum;
         }else{
