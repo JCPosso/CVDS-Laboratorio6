@@ -1,7 +1,6 @@
 package adivinador;
 import java.io.Serializable;
 import java.util.ArrayList;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
 
